@@ -108,7 +108,7 @@ select:focus {
 .pass-name {
   font-size: 1.2em;
   font-weight: bold;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .user-price {
