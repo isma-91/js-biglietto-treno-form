@@ -25,8 +25,13 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex: 1 1 200px;
 }
 
 .btns {
   width: 100%;
+}
+
+.btns button {
+  margin: 0 2rem;
 }

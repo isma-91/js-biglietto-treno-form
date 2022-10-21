@@ -1,12 +1,11 @@
-const priceKm = 0.21;
-
 // let Km = prompt("Quanti chilometri devi percorrere?");
 // Km = parseInt(Km);
 
 // let age = prompt("Quanti anni hai?");
 // age = parseInt(age);
+const priceKm = 0.21;
 
-let name = document.querySelector("[name=name]").value;
+let Name = document.querySelector("[name=name]").value;
 
 let Km = document.querySelector("[name=kilometres]").value;
 Km = parseFloat(Km);
@@ -36,4 +35,6 @@ eleConfirm.addEventListener("click", function () {
   } else {
     console.log(`Il costo del tuo biglietto è: ${totalPriceKm}€`);
   }
+
+  console.log(`Il tuo nome è: ${Name}€`);
 });
