@@ -9,13 +9,20 @@
     <link rel="stylesheet" href="CSS/style.css" />
     <!-- JS -->
     <script src="JS/script.js" defer></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
     </header>
     <main>
-      <div class="container">
+      <div class="container info">
         <div class="card user-info">
           <label for="name">Nome e Cognome</label>
           <input type="text" name="name" id="name" />
@@ -42,10 +49,28 @@
 
       <h2>IL TUO BIGLIETTO</h2>
 
-      <div class="container">
+      <div class="container ticket">
+        <div class="passenger">
+          <h3>NOME PASSEGGERO</h3>
+          <div class="pass-name"></div>
+        </div>
         <div class="user-price">
-          <h4>Costo biglietto</h4>
-          <div class="fee"></div>
+          <ul>
+            <li>Offerta</li>
+            <li>Biglietto standard</li>
+          </ul>
+          <ul>
+            <li>Carrozza</li>
+            <li>187</li>
+          </ul>
+          <ul>
+            <li>Codice CP</li>
+            <li>87645</li>
+          </ul>
+          <ul>
+            <li>Costo Biglietto</li>
+            <li class="fee"></li>
+          </ul>
         </div>
       </div>
     </main>

@@ -4,6 +4,8 @@
 // let age = prompt("Quanti anni hai?");
 // age = parseInt(age);
 const eleConfirm = document.querySelector(".confirm");
+const eleDeny = document.querySelector(".deny");
+const eleTicket = document.querySelector(".ticket");
 
 eleConfirm.addEventListener("click", function () {
   const priceKm = 0.21;
@@ -29,12 +31,17 @@ eleConfirm.addEventListener("click", function () {
   totalPriceOver = parseFloat(totalPriceOver.toFixed(2));
 
   if (age === "under") {
-    console.log(`Il costo del tuo biglietto è: ${totalPriceMin}€`);
+    document.querySelector(".fee").innerHTML = totalPriceMin + "€";
   } else if (age === "over") {
-    console.log(`Il costo del tuo biglietto è: ${totalPriceOver}€`);
+    document.querySelector(".fee").innerHTML = totalPriceOver + "€";
   } else {
-    console.log(`Il costo del tuo biglietto è: ${totalPriceKm}€`);
+    document.querySelector(".fee").innerHTML = totalPriceKm + "€";
   }
 
-  console.log(`Il tuo nome è: ${Name}€`);
+  document.querySelector(".pass-name").innerHTML = Name;
+  eleTicket.classList.add("show");
+});
+
+eleDeny.addEventListener("click", function () {
+  eleTicket.classList.remove("show");
 });
