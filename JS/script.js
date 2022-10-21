@@ -1,10 +1,20 @@
 const priceKm = 0.21;
 
-let Km = prompt("Quanti chilometri devi percorrere?");
-Km = parseInt(Km);
+// let Km = prompt("Quanti chilometri devi percorrere?");
+// Km = parseInt(Km);
 
-let age = prompt("Quanti anni hai?");
+// let age = prompt("Quanti anni hai?");
+// age = parseInt(age);
+
+let name = document.querySelector("[name=name]").value;
+
+let Km = document.querySelector("[name=kilometres]").value;
+Km = parseFloat(Km);
+
+let age = document.querySelector("[name=yo]").value;
 age = parseInt(age);
+
+const eleConfirm = document.querySelector(".confirm");
 
 // Prezzo totale senza sconto (per età dai 19 ai 65)
 let totalPriceKm = priceKm * Km;
@@ -18,10 +28,12 @@ totalPriceMin = parseFloat(totalPriceMin.toFixed(2));
 let totalPriceOver = totalPriceKm - totalPriceKm * 0.4;
 totalPriceOver = parseFloat(totalPriceOver.toFixed(2));
 
-if (age < 18) {
-  console.log(`Il costo del tuo biglietto è: ${totalPriceMin}€`);
-} else if (age > 65) {
-  console.log(`Il costo del tuo biglietto è: ${totalPriceOver}€`);
-} else {
-  console.log(`Il costo del tuo biglietto è: ${totalPriceKm}€`);
-}
+eleConfirm.addEventListener("click", function () {
+  if (age === "under") {
+    console.log(`Il costo del tuo biglietto è: ${totalPriceMin}€`);
+  } else if (age === "over") {
+    console.log(`Il costo del tuo biglietto è: ${totalPriceOver}€`);
+  } else {
+    console.log(`Il costo del tuo biglietto è: ${totalPriceKm}€`);
+  }
+});

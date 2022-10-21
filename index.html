@@ -8,7 +8,45 @@
     <!-- CSS -->
     <link rel="stylesheet" href="CSS/style.css" />
     <!-- JS -->
-    <script src="JS/script.js"></script>
+    <script src="JS/script.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+    </header>
+    <main>
+      <div class="container">
+        <div class="card user-info">
+          <label for="name">Nome e Cognome</label>
+          <input type="text" name="name" id="name" />
+        </div>
+
+        <div class="card user-distance">
+          <label for="km">Km da percorrere</label>
+          <input type="number" name="kilometres" id="km" />
+        </div>
+
+        <div class="card user-age">
+          <label for="age">Fascia d'età</label>
+          <select name="yo" id="age">
+            <option value="under">Minorenne</option>
+            <option value="over18">Maggiorenne</option>
+            <option value="over">Over 65</option>
+          </select>
+        </div>
+        <div class="btns">
+          <button class="confirm">Conferma</button>
+        </div>
+      </div>
+
+      <h2>IL TUO BIGLIETTO</h2>
+
+      <div class="container">
+        <div class="user-price">
+          <h4>Costo biglietto</h4>
+          <div class="fee"></div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

@@ -1,0 +1,32 @@
+header {
+  text-align: center;
+}
+
+main {
+  text-align: center;
+}
+
+h2 {
+  margin-top: 50px;
+}
+.container {
+  max-width: 1400px;
+  min-height: 200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: 3px solid black;
+  border-radius: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btns {
+  width: 100%;
+}
